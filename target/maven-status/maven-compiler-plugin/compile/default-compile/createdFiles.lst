@@ -1,0 +1,10 @@
+com\revature\annotation\Id.class
+com\revature\util\PrimaryKeyField.class
+com\revature\util\ForeignKeyField.class
+com\revature\util\Configuration.class
+com\revature\util\ColumnField.class
+com\revature\annotation\Column.class
+com\revature\annotation\Entity.class
+com\revature\inspection\ClassInspector.class
+com\revature\util\MetaModel.class
+com\revature\annotation\JoinColumn.class
