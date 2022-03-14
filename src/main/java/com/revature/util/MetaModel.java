@@ -70,6 +70,18 @@ public class MetaModel<T> {
 		throw new RuntimeException("Did not find a field annotated with @Id in: " + clazz.getName());
 	}
 	
+	public String getEntity() {
+		
+		if (clazz.getAnnotation(Entity.class) == null) {
+			throw new IllegalStateException("Cannot create MetaModel object from this class! Provided class " + clazz.getName() + " is not annotated with @Entity");
+		}
+
+		Entity entity = clazz.getAnnotation(Entity.class);
+		
+		return entity.tableName();
+		
+	}
+	
 	public List<ForeignKeyField> getForeignKey() {
 		
 		Field[] fields = clazz.getDeclaredFields();

@@ -4,10 +4,12 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+
 public class Configuration {
 
 
 	private List<MetaModel<Class<?>>> metaModelList; // for example, this is a placeholder for metamodels of SuperVillain, SuperPrison, and Crime
+	
 	
 	// Constructor - addAnnotatedClass
 	public Configuration addAnnotatedClasses(List<Class<?>> annotatedClasses) {
@@ -37,12 +39,15 @@ public class Configuration {
 		return (List<MetaModel<Class<?>>>) ((metaModelList == null) ? Collections.emptyList() : this.metaModelList);
 	}
 	
-	//return a connection object
+//	private String dbUrl;
+//	private String dbUsername;
+//	private String dbPassword;
+//	
 //	public Connection getConnection(String dbUrl, String dbUsername, String dbPassword) {
-//		this.dbUrl = dbUrl;
-//		this.dbUsername = dbUsername;
-//		this.dbPassword = dbPassword;
-//	}
+//	this.dbUrl = dbUrl;
+//	this.dbUsername = dbUsername;
+//	this.dbPassword = dbPassword;
+//}
 	
 	// maybe build an ORM helper class that you would delegate this functionality to
 	// SRP - Single Responsibility Principle (SOLID)
